@@ -1,0 +1,49 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+
+
+# VSCode settings
+.vscode/
+
+# MacOS / Windows / Linux OS files
+.DS_Store
+Thumbs.db
+
+# Log and temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Python environment files
+*.egg-info/
+*.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Data and model files (optional - based on your use case)
+*.csv
+*.tsv
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.npz
+*.npy
+*.pt
+*.ckpt
+
+# PyCharm settings
+.idea/

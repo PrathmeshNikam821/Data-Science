@@ -1,0 +1,70 @@
+n Python, a yield generator refers to a generator function—a special kind of function that uses the yield keyword to produce a sequence of values lazily, one at a time, instead of returning them all at once like with return.
+
+🔹 What is yield?
+yield is like return, but instead of exiting the function, it pauses the function and remembers its state for the next call.
+
+Each time the generator is called with next(), it resumes execution right after the last yield.
+
+🔹 Generator Function Example:
+python
+Copy
+Edit
+def count_up_to(max):
+    count = 1
+    while count <= max:
+        yield count
+        count += 1
+This function returns a generator object.
+
+You can iterate over it using a loop or the next() function.
+
+python
+Copy
+Edit
+counter = count_up_to(3)
+print(next(counter))  # Output: 1
+print(next(counter))  # Output: 2
+print(next(counter))  # Output: 3
+# next(counter) would raise StopIteration
+🔹 Benefits of Using yield:
+Memory Efficient: Doesn’t store the entire result in memory.
+
+Lazy Evaluation: Generates values one at a time as needed.
+
+Infinite Sequences: Useful for streams or infinite data sequences.
+
+🔹 Generator vs Normal Function
+Feature	Normal Function (return)	Generator Function (yield)
+Returns	Single value or entire data	One value at a time
+Memory Usage	High (stores all at once)	Low (lazy evaluation)
+Can Resume Execution	❌	✅ (resumes from last yield)
+
+🔹 Practical Use Case
+python
+Copy
+Edit
+def read_large_file(file_path):
+    with open(file_path) as f:
+        for line in f:
+            yield line.strip()
+This allows you to process large files line by line without loading the whole file into memory.
+
+If you want a visual or memory diagram explanation, I can help with that too.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
