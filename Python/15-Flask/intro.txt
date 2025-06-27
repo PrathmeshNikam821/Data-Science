@@ -1,0 +1,6 @@
+Flask Framework : used to develop web applications 
+
+WSGI : web server gateway interface protocol
+
+Jinja 2 Template 
+
